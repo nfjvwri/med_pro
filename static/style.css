@@ -1,0 +1,51 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #fff;
+  --text:#111827;
+  --muted:#6b7280;
+  --accent:#7c3aed;
+  --success:#16a34a;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+}
+
+/* basic reset */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--text)}
+.container{max-width:980px;margin:28px auto;padding:0 18px}
+.topbar{background:transparent;padding:12px 0}
+.topbar .container{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:18px;text-decoration:none;color:var(--text)}
+nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+nav .muted{margin-right:10px;color:var(--muted)}
+
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(16,24,40,0.06)}
+.hero{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start}
+.row{display:flex;gap:12px;margin:10px 0}
+.row label{flex:1;display:block}
+input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #e6e9ef;font-size:14px}
+.actions{display:flex;gap:8px;margin-top:8px}
+.btn{padding:8px 12px;border-radius:8px;border:0;background:var(--accent);color:white;cursor:pointer}
+.btn.ghost, .btn.ghost:visited{background:transparent;border:1px solid #e6e9ef;color:var(--muted);text-decoration:none}
+.result-card{margin-top:12px;padding:12px;border-radius:10px;text-align:center}
+.big{font-size:40px;font-weight:700}
+.small{font-size:13px;color:var(--muted)}
+.category{font-weight:700;text-transform:uppercase;margin-top:6px}
+.advice{color:var(--muted);font-size:13px;margin-top:6px}
+
+.grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+.auth{max-width:420px;margin:0 auto}
+.history{width:100%;border-collapse:collapse;font-size:13px}
+.history th, .history td{padding:6px 8px;border-bottom:1px solid #f3f4f6;text-align:left}
+.muted{color:var(--muted)}
+
+.flash-wrap{margin-bottom:12px}
+.flash{padding:10px;border-radius:8px;margin-bottom:8px}
+.flash.success{background:#ecfdf5;color:#064e3b}
+.flash.error{background:#fff1f2;color:#9b1c1c}
+.flash.info{background:#eff6ff;color:#0b3d91}
+
+@media (max-width:900px){
+  .hero, .grid{grid-template-columns:1fr}
+  .hero aside{order:2}
+}
